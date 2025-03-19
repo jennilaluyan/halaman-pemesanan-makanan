@@ -1,68 +1,306 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Cream</title>
+    <title>Pizza Rhapsody</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="userpage">
     <header>
-        <h1>Pizza Cream</h1>
-        <p>Lezatnya pizza dan es krim dalam satu tempat!</p>
+        <div class="logo">
+            <span class="logo-text">Pizza Cream</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <section>
-        <h2>Menu Kami</h2>
-        <h3>Makanan</h3>
-        <ol>
-            <li>
-                <h3>Pizza Margherita</h3>
-                <p>Pizza klasik dengan saus tomat, keju mozzarella, dan daun basil.</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Supreme_pizza.jpg" alt="Pizza Margherita" width="200">
-                <p><a href="https://id.wikipedia.org/wiki/Pizza_Margherita" target="_blank">Detail di Wikipedia</a></p>
-            </li>
-            <li>
-                <h3>Pizza Pepperoni</h3>
-                <p>Pizza dengan topping pepperoni yang gurih dan keju meleleh.</p>
-                <img src="https://i.pinimg.com/474x/fc/aa/79/fcaa7948e06992862f2b3bd480ba4ae9.jpg" alt="Pizza Pepperoni" width="200">
-                <p><a href="https://id.wikipedia.org/wiki/Pepperoni" target="_blank">Detail di Wikipedia</a></p>
-            </li>
-            <li>
-                <h3>Pizza BBQ Chicken</h3>
-                <p>Pizza dengan ayam panggang, saus BBQ, dan keju cheddar.</p>
-                <img src="https://i.pinimg.com/474x/3c/b3/87/3cb38745fc20c37576dc2201e3c0ab6f.jpg" alt="Pizza BBQ Chicken" width="200">
-                <p><a href="https://id.wikipedia.org/wiki/Pizza" target="_blank">Detail di Wikipedia</a></p>
-            </li>
-        </ol>
-        <h3>Minuman</h3>
-        <ol>
-            <li>
-                <h3>Es Krim Cokelat</h3>
-                <p>Es krim cokelat lembut dengan rasa yang kaya.</p>
-                <img src="https://i.pinimg.com/474x/54/c4/41/54c441f4a4f097e96d628611ef8c1ce4.jpg" alt="Es Krim Cokelat" width="200">
-                <p><a href="https://id.wikipedia.org/wiki/Es_krim_cokelat" target="_blank">Detail di Wikipedia</a></p>
-            </li>
-            <li>
-                <h3>Es Krim Stroberi</h3>
-                <p>Es krim stroberi segar dengan rasa manis alami.</p>
-                <img src="https://i.pinimg.com/474x/d6/a5/57/d6a5579421fbafc0a568f6481f684288.jpg" alt="Es Krim Stroberi" width="200">
-                <p><a href="https://id.wikipedia.org/wiki/Es_krim_stroberi" target="_blank">Detail di Wikipedia</a></p>
-            </li>
-        </ol>
+    <section class="welcome-banner">
+        <div class="welcome-text">
+            <h1>Welcome!</h1>
+            <p>How can we satisfy your cravings today?</p>
+        </div>
     </section>
-    
-    <section>
-        <h2>Pesan Sekarang</h2>
-        <form action="order.html" method="get">
-            <label for="nama">Nama:</label>
-            <input type="text" id="nama" name="nama" required>
-            <br>
-            <button type="submit">Pesan</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Pizza Cream. Semua Hak Dilindungi.</p>
-    </footer>
+    <main>
+        <div class="menu-grid">
+            <!-- Menu items -->
+            <div class="menu-item food" data-name="Pizza Vito" data-price="45000">
+                <img src="./Assets/pizza1.jpg" alt="Pizza Vito">
+                <div class="details">
+                    <h3>Pizza Vito</h3>
+                    <p>A symphony of flavors featuring tangy tomato sauce and melted mozzarella cheese, all crowned with
+                        generous slices of spicy pepperoni.</p>
+                    <p class="price">Rp. 45.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Pepperoni_pizza" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Dino Spesialito" data-price="45000">
+                <img src="./Assets/pizza3.jpg" alt="Dino Spesialito">
+                <div class="details">
+                    <h3>Dino Spesialito</h3>
+                    <p>Our signature tomato sauce is spread over a crispy crust, topped with creamy mozzarella cheese.
+                        Fresh basil leaves are also added for their fragrant aroma.</p>
+                    <p class="price">Rp. 45.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Margherita_pizza" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Jenni Favorito" data-price="43000">
+                <img src="./Assets/pizza4.jpg" alt="Jenni Favorito">
+                <div class="details">
+                    <h3>Jenni Favorito</h3>
+                    <p>Sweet, juicy pineapple chunks are scattered amongst savory slices of cooked ham. Alongside with
+                        Tangy tomato sauce and creamy mozzarella cheese.</p>
+                    <p class="price">Rp. 43.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Hawaiian_pizza" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Pizza Davido" data-price="42000">
+                <img src="./Assets/pizza5.jpg" alt="Pizza Davido">
+                <div class="details">
+                    <h3>Pizza Davido</h3>
+                    <p>Creamy feta cheese crumbles mingle with salty black olives and juicy red peppers. A bed of our
+                        signature tomato sauce and a sprinkle of mozzarella cheese tie.</p>
+                    <p class="price">Rp. 42.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Greek_pizza" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Cheesio Pizza" data-price="40000">
+                <img src="./Assets/pizza6.jpg" alt="Cheesio Pizza">
+                <div class="details">
+                    <h3>Cheesio Pizza</h3>
+                    <p>Our classic cheese pizza is a blank canvas for your cravings. We use a tangy tomato sauce and a
+                        blend of creamy mozzarella and provolone cheeses. </p>
+                    <p class="price">Rp. 40.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Cheese_pizza" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Garfield Lasagna" data-price="50000">
+                <img src="./Assets/pizza2.jpg" alt="Garfield Lasagna">
+                <div class="details">
+                    <h3>Garfield Lasagna</h3>
+                    <p>Features layers of melt-in-your-mouth pasta sheets filled with a savory meat sauce. Creamy
+                        béchamel sauce covered with a melted mozzarella cheese</p>
+                    <p class="price">Rp. 50.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Lasagna" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Spaghetti Long" data-price="35000">
+                <img src="./Assets/pizza7.jpg" alt="Spaghetti Long">
+                <div class="details">
+                    <h3>Spaghetti Long</h3>
+                    <p>Our spaghetti is piled with a slow-cooked sauce simmered with ground beef, vegetables, and herbs.
+                        Parmesan cheese finishes this timeless dish.</p>
+                    <p class="price">Rp. 35.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Spaghetti_with_meat_sauce" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Spaghetti Bakso" data-price="38000">
+                <img src="./Assets/pizza8.jpg" alt="Spaghetti Bakso">
+                <div class="details">
+                    <h3>Spaghetti Bakso</h3>
+                    <p>Tender meatballs are simmered in a rich tomato sauce and served over al dente spaghetti.
+                        Alongside with a sprinkle of Parmesan cheese.</p>
+                    <p class="price">Rp. 38.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Spaghetti_with_meatballs" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Fetucinne Alvito" data-price="36000">
+                <img src="./Assets/pizza9.jpg" alt="Fetucinne Alvito">
+                <div class="details">
+                    <h3>Fetucinne Alvito</h3>
+                    <p>Tender pasta noodles in a rich sauce. A generous amount of grated Parmesan cheese melting and
+                        creating a golden crust. Freshly parsley adds the freshness. </p>
+                    <p class="price">Rp. 36.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Fettuccine_Alfredo" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Katsu Fetucinne" data-price="38000">
+                <img src="./Assets/pizza10.jpg" alt="Katsu Fetucinne">
+                <div class="details">
+                    <h3>Katsu Fetucinne</h3>
+                    <p>Featureing tender, shredded chicken in a creamy Alfredo sauce. Fettuccine noodles are cooked to
+                        al dente and tossed in the flavorful sauce. </p>
+                    <p class="price">Rp. 38.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Fettuccine_Alfredo" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Risotto Maknyuso" data-price="36000">
+                <img src="./Assets/pizza11.jpg" alt="Risotto Maknyuso">
+                <div class="details">
+                    <h3>Risotto Maknyuso</h3>
+                    <p>Arborio rice in creamy perfection and folded with sauteed mushrooms, spinach, and Parmesan
+                        cheese. A touch of butter plus a fresh parsley.</p>
+                    <p class="price">Rp. 36.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Risotto" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Tomato Risotto" data-price="35000">
+                <img src="./Assets/pizza12.jpg" alt="Tomato Risotto">
+                <div class="details">
+                    <h3>Tomato Risotto</h3>
+                    <p>Arborio rice is cooked until creamy, then tossed with roasted tomatoes, fresh mozzarella, and
+                        basil plus a drizzle of balsamic glaze.</p>
+                    <p class="price">Rp. 35.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Risotto" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Magnifico Bottarga" data-price="30000">
+                <img src="./Assets/pizza13.jpg" alt="Magnifico Bottarga">
+                <div class="details">
+                    <h3>Magnifico Bottarga</h3>
+                    <p>A delicacy made from the eggs of mullet fish. It has a salty, umami flavor with a buttery
+                        texture. The mullet roe is grated over the top of the dish.</p>
+                    <p class="price">Rp. 30.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Bottarga" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Arancini Bulato" data-price="30000">
+                <img src="./Assets/pizza14.jpg" alt="Arancini Bulato">
+                <div class="details">
+                    <h3>Arancini Bulato</h3>
+                    <p>Sicilian rice balls filled with savory ingredients and deep-fried. The rice balls is filled with
+                        cheese, but also include meat ragu, vegetables, and mozzarella. </p>
+                    <p class="price">Rp. 30.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Arancini" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item food" data-name="Foccacia Rossa" data-price="28000">
+                <img src="./Assets/pizza15.jpg" alt="Foccacia Rossa">
+                <div class="details">
+                    <h3>Foccacia Rossa</h3>
+                    <p>Made with a light and airy dough that is flavored with olive oil and rosemary. Then it's topped
+                        with fresh tomatoes and flaky sea salt, and baked until golden brown. </p>
+                    <p class="price">Rp. 28.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Focaccia" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item drink" data-name="Negroni" data-price="25000">
+                <img src="./Assets/drinks1.jpg" alt="Negroni">
+                <div class="details">
+                    <h3>Negroni</h3>
+                    <p>Made with equal parts gin, Campari, and sweet vermouth. Stirred together with ice and garnished
+                        with an orange peel. </p>
+                    <p class="price">Rp. 25.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Negroni" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item drink" data-name="Aperol Spritz" data-price="25000">
+                <img src="./Assets/drinks2.jpg" alt="Aperol Spritz">
+                <div class="details">
+                    <h3>Aperol Spritz</h3>
+                    <p>It's made with Aperol, prosecco, and soda water, and is garnished with an orange slice.</p>
+                    <p class="price">Rp. 25.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Aperol_Spritz" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item drink" data-name="Limoncello" data-price="23000">
+                <img src="./Assets/drinks3.jpg" alt="Limoncello">
+                <div class="details">
+                    <h3>Limoncello</h3>
+                    <p>Made with limoncello, prosecco or other sparkling wine, soda water, ice and garnished with a
+                        lemon wedge.</p>
+                    <p class="price">Rp. 23.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Limoncello" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item drink" data-name="Affogato" data-price="25000">
+                <img src="./Assets/drinks6.jpg" alt="Affogato">
+                <div class="details">
+                    <h3>Affogato</h3>
+                    <p>Affogato is made with a scoop of vanilla gelato or ice cream topped with a shot of hot espresso.
+                    </p>
+                    <p class="price">Rp. 25.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Affogato" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item drink" data-name="Peroni" data-price="20000">
+                <img src="./Assets/drinks4.jpg" alt="Peroni">
+                <div class="details">
+                    <h3>Peroni</h3>
+                    <p> Peroni is a crisp, refreshing lager beer with a hoppy aroma. It is brewed in Italy with Pilsner
+                        malt and Hallertau hops.</p>
+                    <p class="price">Rp. 20.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Peroni_Brewery" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item drink" data-name="Coca-Cola" data-price="15000">
+                <img src="./Assets/drinks5.jpg" alt="Coca-Cola">
+                <div class="details">
+                    <h3>Coca-Cola</h3>
+                    <p>Your beloved, ordinary soda.</p>
+                    <p class="price">Rp. 15.000</p>
+                    <div class="item-actions">
+                        <a href="https://en.wikipedia.org/wiki/Coca-Cola" target="_blank" class="wiki-link">Learn More</a>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
