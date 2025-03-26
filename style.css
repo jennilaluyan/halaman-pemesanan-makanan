@@ -184,8 +184,8 @@ nav ul li a:hover {
 
 .cart-container {
     display: flex;
-    justify-content: space-between;
-    margin: 0 40px 40px;
+    justify-content: space-around;
+    margin: 0 20px 20px;
     gap: 30px;
     flex-grow: 1;
 }
@@ -237,18 +237,104 @@ nav ul li a:hover {
     padding: 40px 0;
 }
 
+/* Cart Item Styling Improvements */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-keranjang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-keranjang>* {
+    flex: 1;
+    text-align: center;
+}
+
+.item-keranjang span:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+.item-keranjang span:last-child {
+    text-align: right;
+}
+
+.item-keranjang button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item-keranjang button:hover {
+    background-color: #ff3333;
+}
+
+/* Total Harga di Keranjang */
+.cart-summary {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.total-harga {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a2a2a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #5a3a3a;
+}
+
+#empty-cart-message {
+    text-align: center;
+    color: #777;
+    padding: 50px;
+    font-size: 1.2em;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .menu-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         padding: 20px;
     }
-    
+
     .cart-container {
         flex-direction: column;
     }
-    
-    .cart-items, .cart-summary {
+
+    .cart-items,
+    .cart-summary {
         width: 100%;
     }
 }
@@ -257,59 +343,130 @@ nav ul li a:hover {
     .logo img {
         width: 150px;
     }
-    
+
     .welcome-text h1 {
         font-size: 2em;
     }
-    
+
     .menu-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .item-actions {
         flex-direction: column;
         gap: 10px;
     }
-    
-    .wiki-link, .menu-item button.add-to-cart {
+
+    .wiki-link,
+    .menu-item button.add-to-cart {
         width: 100%;
         text-align: center;
     }
 }
 
-        /* Logo text styling */
-        .logo-text {
-            font-family: 'Arial', sans-serif;
-            font-size: 32px;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            letter-spacing: 1px;
-            background: linear-gradient(135deg, #fff 20%, #e3cfc7 80%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            padding: 5px 0;
-        }
-        
-        /* Fix for any potential issues with cart layout on smaller screens */
-        @media (max-width: 768px) {
-            .cart-container {
-                flex-direction: column;
-            }
-            
-            .cart-items, .cart-summary {
-                flex: none;
-                width: auto;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .logo-text {
-                font-size: 24px;
-            }
-            
-            .yourcart {
-                margin: 20px 20px 15px;
-                font-size: 1.6em;
-            }
-        }
+/* Logo text styling */
+.logo-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #fff 20%, #e3cfc7 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 5px 0;
+}
+
+/* Fix for any potential issues with cart layout on smaller screens */
+@media (max-width: 768px) {
+    .cart-container {
+        flex-direction: column;
+    }
+
+    .cart-items,
+    .cart-summary {
+        flex: none;
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 24px;
+    }
+
+    .yourcart {
+        margin: 20px 20px 15px;
+        font-size: 1.6em;
+    }
+}
+
+/* Gaya Menu Hamburger */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    .hamburger-menu.aktif span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-menu.aktif span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.aktif span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .menu-mobile.aktif {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #4a2a2a;
+    }
+
+    .menu-mobile ul {
+        flex-direction: column;
+    }
+
+    .menu-mobile ul li {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+/* Gaya Item Keranjang */
+.item-keranjang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.item-keranjang button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
